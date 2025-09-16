@@ -23,5 +23,10 @@ sequenceDiagram
     activate server
     server->>browser: Json data:[{"content":"test","date":"2025-09-16T07:28:50.238Z"} etc
     deactivate server
+
+    browser->>server: GET https://studies.cs.helsinki.fi/favicon.ico
+    activate server
+    server->>browser: 404 not found html
+    deactivate
     
 ```
